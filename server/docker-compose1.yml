@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  node-app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=development
